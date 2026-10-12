@@ -1,0 +1,6 @@
+{
+  "$comment": "Client/legal inputs for /privacy and /terms. Never invent: pending values show [LEGAL DETAILS REQUIRED] / [CLIENT POLICY REQUIRED] in development and preview; effectiveDate and governingLaw (plus business.json → legalName) block the production build until verified. appointmentPolicy is optional (omitted when pending). The page wording itself lives in src/data/legal.ts and is a draft for client/legal review, not legal advice.",
+  "effectiveDate": { "status": "pending", "note": "Date the reviewed Privacy Policy and Terms take effect" },
+  "governingLaw": { "status": "pending", "note": "Governing law and jurisdiction for the Terms, confirmed by the client or their legal adviser" },
+  "appointmentPolicy": { "status": "pending", "note": "The salon's appointment policy (e.g. cancellation, late arrival, deposits), only if it has one" }
+}

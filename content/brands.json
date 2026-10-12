@@ -1,0 +1,61 @@
+{
+  "$comment": "Client-selected brands (green-dot list + Wella, Shea Butter, Brillare Professional). claim is 'none' for every brand: never describe any brand as partner, official or verified unless the client confirms it in writing. Logo files: replace traced SVGs with official brand-kit files before release where possible.",
+  "heading": "Products & Brands",
+  "brands": [
+    {
+      "id": "kerastase",
+      "name": "Kérastase",
+      "kind": "logo",
+      "claim": "none"
+    },
+    {
+      "id": "loreal-professionnel",
+      "name": "L'Oréal Professionnel",
+      "kind": "logo",
+      "claim": "none"
+    },
+    {
+      "id": "kanpeki",
+      "name": "Kanpeki",
+      "kind": "logo",
+      "claim": "none"
+    },
+    {
+      "id": "redken",
+      "name": "Redken",
+      "kind": "logo",
+      "claim": "none"
+    },
+    {
+      "id": "olaplex",
+      "name": "Olaplex",
+      "kind": "logo",
+      "claim": "none"
+    },
+    {
+      "id": "k18",
+      "name": "K18",
+      "kind": "logo",
+      "claim": "none"
+    },
+    {
+      "id": "wella",
+      "name": "Wella",
+      "kind": "logo",
+      "claim": "none"
+    },
+    {
+      "id": "shea-butter",
+      "name": "Shea Butter",
+      "kind": "logo",
+      "claim": "none",
+      "note": "Listed separately as supplied by the client. No relationship with any other brand is assumed."
+    },
+    {
+      "id": "brillare-professional",
+      "name": "Brillare Professional",
+      "kind": "logo",
+      "claim": "none"
+    }
+  ]
+}

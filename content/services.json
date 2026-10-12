@@ -1,0 +1,266 @@
+{
+  "$comment": "Source of truth: client's handwritten service sheet. sourceLabel = exact wording. proposedLabel is displayed ONLY when labelStatus is 'confirmed'. Descriptions marked 'draft' are WEBRO-written from the service name only and await client review. No prices. Client copy supplied 2026-10-02 is marked 'verified'; confirmed proposedLabel values are the client's chosen display names.",
+  "groups": [
+    {
+      "id": "hair",
+      "number": "01",
+      "title": "Hair",
+      "summary": {
+        "status": "draft",
+        "value": "Smoothing, conditioning, repair, gloss and scalp rituals: the treatments that change how hair looks, feels and behaves, finished with professional care."
+      },
+      "items": [
+        {
+          "id": "keratin-treatment",
+          "sourceLabel": "Keratin Treatment",
+          "labelStatus": "as-source",
+          "description": {
+            "status": "draft",
+            "value": "A smoothing treatment for frizz-prone hair that leaves it sleek, manageable and easier to style every day."
+          },
+          "highlights": {
+            "status": "draft",
+            "value": [
+              "Calms frizz and flyaways",
+              "Makes everyday styling easier",
+              "A sleek, polished finish"
+            ]
+          }
+        },
+        {
+          "id": "hair-botox-treatment",
+          "sourceLabel": "Hair Botox Treatment",
+          "labelStatus": "as-source",
+          "description": {
+            "status": "draft",
+            "value": "An intensive conditioning treatment for dry, tired lengths, for hair that feels soft and looks fuller and glossier."
+          },
+          "highlights": {
+            "status": "draft",
+            "value": [
+              "For dry or lifeless lengths",
+              "A softer, smoother feel",
+              "A fuller-looking, glossy finish"
+            ]
+          }
+        },
+        {
+          "id": "anti-dandruff-treatment",
+          "sourceLabel": "Anti Dandruff Treatment",
+          "proposedLabel": "Anti-Dandruff Treatment",
+          "labelStatus": "needs-confirmation",
+          "flag": "Hyphenation: confirm 'Anti Dandruff' or 'Anti-Dandruff'.",
+          "description": {
+            "status": "draft",
+            "value": "A scalp-first treatment that targets visible flaking and leaves the scalp feeling clean, calm and comfortable."
+          },
+          "highlights": {
+            "status": "draft",
+            "value": [
+              "Focused on the scalp, not just the lengths",
+              "Helps manage visible flaking",
+              "Leaves the scalp feeling fresh"
+            ]
+          }
+        },
+        {
+          "id": "hair-glossing",
+          "sourceLabel": "Hair Glossing",
+          "labelStatus": "as-source",
+          "description": {
+            "status": "draft",
+            "value": "A finishing treatment that brings back shine and depth, for hair with a rich, mirror-like gloss."
+          },
+          "highlights": {
+            "status": "draft",
+            "value": [
+              "Adds shine and depth",
+              "Refreshes dull-looking hair",
+              "A rich, reflective finish"
+            ]
+          }
+        },
+        {
+          "id": "hair-repair-treatment",
+          "sourceLabel": "Hair Repair Treatment",
+          "labelStatus": "as-source",
+          "description": {
+            "status": "draft",
+            "value": "Restorative care for hair stressed by heat, colour or styling, bringing back softness and a healthier look."
+          },
+          "highlights": {
+            "status": "draft",
+            "value": [
+              "For hair stressed by heat, colour or styling",
+              "Restores a soft, supple feel",
+              "Healthier-looking lengths"
+            ]
+          }
+        },
+        {
+          "id": "hair-textures",
+          "sourceLabel": "Hair Textures",
+          "labelStatus": "confirmed",
+          "description": {
+            "status": "verified",
+            "value": "Expertly tailored services for textured hair, designed to enhance natural movement, definition, and dimension. Our approach combines refined technique with an understanding of individual hair characteristics to create beautifully controlled, polished, and effortlessly wearable results."
+          },
+          "proposedLabel": "Textured Hair Artistry"
+        },
+        {
+          "id": "hair-kerastase",
+          "sourceLabel": "Hair Kerastase",
+          "proposedLabel": "Kérastase Hair Rituals",
+          "labelStatus": "confirmed",
+          "description": {
+            "status": "verified",
+            "value": "An elevated hair-care experience featuring tailored Kérastase rituals designed to address individual hair and scalp concerns. Each treatment is thoughtfully selected to enhance nourishment, strength, softness, luminosity, and overall hair quality."
+          }
+        },
+        {
+          "id": "hair-scalp-treatments",
+          "sourceLabel": "Hair Scalp Treatments",
+          "labelStatus": "as-source",
+          "description": {
+            "status": "draft",
+            "value": "Treatments that begin at the scalp, cleansing and caring for the base of healthy-looking hair."
+          },
+          "highlights": {
+            "status": "draft",
+            "value": [
+              "Cleanses and refreshes the scalp",
+              "A calm, unhurried ritual",
+              "A healthy base for your hair"
+            ]
+          }
+        },
+        {
+          "id": "other-hair-serices",
+          "sourceLabel": "Other Hair Serices",
+          "proposedLabel": "Signature Hair Services",
+          "labelStatus": "confirmed",
+          "description": {
+            "status": "verified",
+            "value": "A curated range of additional hair services created to complement your individual styling and grooming requirements. From finishing touches to specialised treatments, each service is delivered with precision, professional expertise, and meticulous attention to detail."
+          }
+        }
+      ]
+    },
+    {
+      "id": "skin",
+      "number": "02",
+      "title": "Skin",
+      "summary": {
+        "status": "draft",
+        "value": "Radiant-skin facials, beauty essentials and a hands and feet spa, in calm, private treatment rooms."
+      },
+      "items": [
+        {
+          "id": "beauty-essentials",
+          "sourceLabel": "Beauty Essentials",
+          "labelStatus": "as-source",
+          "description": {
+            "status": "verified",
+            "value": "A refined collection of essential beauty services designed to enhance your natural features and maintain a polished, well-groomed appearance. Each service is delivered with precision, discretion, and meticulous attention to detail."
+          }
+        },
+        {
+          "id": "hands-feet-spa",
+          "sourceLabel": "Skin – Hands & Feet Spa",
+          "labelStatus": "as-source",
+          "description": {
+            "status": "verified",
+            "value": "Indulgent hand and foot rituals combining cleansing, exfoliation, nourishment, and restorative care. Thoughtfully performed in our dedicated pedicure lounge to leave the skin feeling exceptionally soft, smooth, refreshed, and beautifully conditioned."
+          },
+          "highlights": {
+            "status": "draft",
+            "value": [
+              "Spa care for hands and feet",
+              "Nails cleaned, shaped and cared for",
+              "Relaxing pedicure loungers"
+            ]
+          }
+        },
+        {
+          "id": "radiant-skin-solutions",
+          "sourceLabel": "Radiant Skin Solutions",
+          "labelStatus": "as-source",
+          "description": {
+            "status": "verified",
+            "value": "Advanced facial and skincare rituals thoughtfully tailored to individual skin needs. Our treatments focus on restoring freshness, improving luminosity, and revealing a smoother, healthier-looking complexion through a considered combination of professional technique and care."
+          },
+          "highlights": {
+            "status": "draft",
+            "value": [
+              "For a fresh, radiant-looking complexion",
+              "Chosen to suit your skin",
+              "Calm, private treatment rooms"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "makeup",
+      "number": "03",
+      "title": "Makeup",
+      "summary": {
+        "status": "verified",
+        "value": "Bridal, HD and airbrush makeup, thoughtfully tailored for your wedding day, celebrations, and every occasion worth remembering."
+      },
+      "items": [
+        {
+          "id": "bridal-makeup",
+          "sourceLabel": "Bridal Makeup",
+          "labelStatus": "as-source",
+          "description": {
+            "status": "verified",
+            "value": "A beautifully personalised bridal look, thoughtfully designed around your features, attire, jewellery, and occasion — with refined application and meticulous finishing for an elegant presence in person and on camera."
+          },
+          "highlights": {
+            "status": "draft",
+            "value": [
+              "Planned around your outfit and jewellery",
+              "For the wedding day and every function",
+              "Beautiful in person and in photographs"
+            ]
+          }
+        },
+        {
+          "id": "hd-makeup",
+          "sourceLabel": "HD Makeup",
+          "labelStatus": "as-source",
+          "description": {
+            "status": "verified",
+            "value": "A refined, camera-ready finish created through seamless blending, balanced coverage, and precise detailing — designed to look naturally luminous while maintaining its elegance under close-up photography and lighting."
+          },
+          "highlights": {
+            "status": "draft",
+            "value": [
+              "Finely blended and natural-looking",
+              "Made for close-ups and cameras",
+              "Ideal for events and shoots"
+            ]
+          }
+        },
+        {
+          "id": "airbrush-makeup",
+          "sourceLabel": "Airbrush Makeup",
+          "labelStatus": "as-source",
+          "description": {
+            "status": "verified",
+            "value": "An ultra-light, finely diffused application that creates a smooth, even, and seamless complexion. Ideal for a weightless finish with refined coverage, lasting comfort, and an impeccably polished appearance."
+          },
+          "highlights": {
+            "status": "draft",
+            "value": [
+              "A light, seamless, even finish",
+              "Feels weightless on the skin",
+              "Ideal for brides and big occasions"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

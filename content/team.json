@@ -1,0 +1,4 @@
+{
+  "$comment": "People shown on the site. ONLY add someone after the client confirms their role AND approves using their name and photo (approved + consent must both be true). Empty = the team section is not shown. Photos use media slots team.<id>.",
+  "members": []
+}

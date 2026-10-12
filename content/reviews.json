@@ -1,0 +1,67 @@
+{
+  "$comment": "Genuine Classy client reviews ONLY, copied exactly as written (no rewriting, merging or summarising), with the client's approval. Fill optional fields (rating, source, date) only when the supplied source shows them. Empty until the client supplies approved reviews: the Reviews page then shows its structure in development only, and `npm run build:production` fails. The Google rating and review count live in content/business.json (rating).",
+  "googleReviewsUrl": {
+    "status": "pending",
+    "note": "Direct Google reviews link from the Business Profile (falls back to the verified Maps listing)"
+  },
+  "reviews": [
+    {
+      "id": "swetha-suthar",
+      "quote": "I have done my haircut services with classy salon and specially recommended to akbar sir for beauty haircut services so thank you so much akbar and classy salon for best services in jaipur...😊😊",
+      "author": "Swetha Suthar",
+      "rating": 5,
+      "source": "Google",
+      "dateLabel": "8 months ago",
+      "featured": true,
+      "approval": {
+        "permission": true,
+        "verbatim": true,
+        "sourceRef": "Google reviews on the Classy listing, supplied by the client (WEBRO chat, 2026-10-02); text as shown on Google, including Google’s own truncation (…)",
+        "approvedOn": "2026-10-02"
+      }
+    },
+    {
+      "id": "mishma-bijawat",
+      "quote": "I came here for nail removal, Banno, who provided the service was really good at her job and was very polite and caring throughout",
+      "author": "Mishma Bijawat",
+      "rating": 5,
+      "source": "Google",
+      "dateLabel": "3 months ago",
+      "featured": true,
+      "approval": {
+        "permission": true,
+        "verbatim": true,
+        "sourceRef": "Google reviews on the Classy listing, supplied by the client (WEBRO chat, 2026-10-02); text as shown on Google, including Google’s own truncation (…)",
+        "approvedOn": "2026-10-02"
+      }
+    },
+    {
+      "id": "madhu-bhardwaj",
+      "quote": "I had an amazing experience at classy salon, Jagatpura for my hair smoothing therapy. The staff were very polite and made me feel comfortable throughout. Goldy sir (hair stylist) explained every step of the process patiently and did a …",
+      "author": "Madhu Bhardwaj",
+      "rating": 5,
+      "source": "Google",
+      "dateLabel": "1 year ago",
+      "approval": {
+        "permission": true,
+        "verbatim": true,
+        "sourceRef": "Google reviews on the Classy listing, supplied by the client (WEBRO chat, 2026-10-02); text as shown on Google, including Google’s own truncation (…)",
+        "approvedOn": "2026-10-02"
+      }
+    },
+    {
+      "id": "tanvi-gupta",
+      "quote": "I recently got my nails done here and absolutely loved the experience! 💅 The staff is super polite, hygiene is well maintained, and they really pay attention to small details. My nails turned out exactly the way I wanted — stylish, neat, …",
+      "author": "Tanvi Gupta",
+      "rating": 5,
+      "source": "Google",
+      "dateLabel": "11 months ago",
+      "approval": {
+        "permission": true,
+        "verbatim": true,
+        "sourceRef": "Google reviews on the Classy listing, supplied by the client (WEBRO chat, 2026-10-02); text as shown on Google, including Google’s own truncation (…)",
+        "approvedOn": "2026-10-02"
+      }
+    }
+  ]
+}

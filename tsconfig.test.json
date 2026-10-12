@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.test.tsbuildinfo",
+    "types": [
+      "vite/client",
+      "node",
+      "@testing-library/jest-dom"
+    ]
+  },
+  "include": [
+    "src",
+    "content/*.json",
+    "tests/unit",
+    "scripts/content-rules.ts",
+    "scripts/forbidden.ts"
+  ]
+}

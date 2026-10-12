@@ -1,0 +1,103 @@
+{
+  "$comment": "Single source for business facts. status 'verified' = client-approved and shipped; 'pending' = CLIENT DATA REQUIRED (never shipped). See docs/CONTENT-MAP.md. Contact details (phone, WhatsApp, email, Maps link, both Instagram accounts, hours, rating) supplied by the client on 2026-10-01/02. Instagram URLs are stored without the share-tracking query parameters (stkn/utm) of the supplied links.",
+  "name": "Classy Unisex Salon",
+  "shortName": "Classy",
+  "descriptor": "Unisex Salon",
+  "address": {
+    "status": "verified",
+    "value": {
+      "streetAddress": "Plot no. 210, Vishwa Vidhyalaya Nagar",
+      "locality": "Jagatpura",
+      "city": "Jaipur",
+      "region": "Rajasthan",
+      "postalCode": "302017",
+      "country": "IN"
+    }
+  },
+  "phone": {
+    "status": "verified",
+    "value": "+918302555854",
+    "checkedOn": "2026-10-02"
+  },
+  "whatsapp": {
+    "status": "verified",
+    "value": "+918302555854",
+    "checkedOn": "2026-10-02"
+  },
+  "email": {
+    "status": "verified",
+    "value": "Classysalonjaipur@gmail.com",
+    "checkedOn": "2026-10-02"
+  },
+  "hours": {
+    "status": "verified",
+    "value": [
+      {
+        "days": [
+          "Mo",
+          "Tu",
+          "We",
+          "Th",
+          "Fr",
+          "Sa",
+          "Su"
+        ],
+        "opens": "09:30",
+        "closes": "21:30"
+      }
+    ],
+    "checkedOn": "2026-10-01"
+  },
+  "rating": {
+    "status": "verified",
+    "value": {
+      "value": 4.8,
+      "count": 1500,
+      "countLabel": "1500+",
+      "source": "Google"
+    },
+    "checkedOn": "2026-10-01"
+  },
+  "geo": {
+    "status": "pending",
+    "note": "Latitude/longitude from the Google Business Profile (optional, improves local SEO)"
+  },
+  "mapsUrl": {
+    "status": "verified",
+    "value": "https://maps.app.goo.gl/C98q7iEKJztyNwsh6?g_st=iw",
+    "checkedOn": "2026-10-02"
+  },
+  "instagram": [
+    {
+      "id": "primary",
+      "handle": "classysalonjaipur",
+      "url": {
+        "status": "verified",
+        "value": "https://www.instagram.com/classysalonjaipur/",
+        "checkedOn": "2026-10-02"
+      }
+    },
+    {
+      "id": "secondary",
+      "handle": "classy_salonjaipur",
+      "url": {
+        "status": "verified",
+        "value": "https://www.instagram.com/classy_salonjaipur/",
+        "checkedOn": "2026-10-02"
+      }
+    }
+  ],
+  "story": {
+    "status": "verified",
+    "value": "Established in 2021, Classy Unisex Salon was created with a vision to bring together exceptional beauty and grooming expertise with a more personal, refined salon experience in Jagatpura, Jaipur.\n\nWe believe that great style begins with understanding the individual. Every client has distinct preferences, features, personality, and lifestyle, which is why our approach is never one-size-fits-all. We take the time to listen, understand, and thoughtfully tailor every service to the person in our chair.\n\nFrom contemporary hair styling and specialised treatments to beauty and grooming services, our work is defined by precision, professionalism, attention to detail, and genuine care.\n\nFor us, a salon experience is not simply about the final look. It is about the confidence you carry when you leave. Since 2021, Classy has remained committed to creating beautiful results, meaningful client experiences, and a standard of service that keeps people coming back."
+  },
+  "established": {
+    "status": "verified",
+    "value": "2021",
+    "checkedOn": "2026-10-02"
+  },
+  "legalName": {
+    "status": "pending",
+    "note": "Legal business/entity name for Privacy Policy and Terms"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "$comment": "Publishing consent for identifiable people in supplied media (bride, staff, clients). Set peopleInMedia to { \"status\": \"verified\", \"value\": true, \"checkedOn\": \"YYYY-MM-DD\" } once the client confirms. Until then the production build is blocked while such media is used.",
+  "peopleInMedia": {
+    "status": "pending",
+    "note": "Confirm that the bride, staff and clients shown in the supplied photos and videos agreed to appear on the website."
+  }
+}

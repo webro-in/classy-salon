@@ -1,0 +1,46 @@
+{
+  "$comment": "About + Home introduction copy, supplied by the client on 2026-10-02 (verbatim). The salon story itself lives in business.json (business.story).",
+  "intro": {
+    "eyebrow": "Established 2021",
+    "title": "A Signature Approach to Beauty, Grooming & Personal Style",
+    "paragraphs": [
+      "Established in 2021, Classy Unisex Salon is a contemporary beauty and grooming destination in Jagatpura, Jaipur, founded with a clear vision to create an elevated salon experience where professional expertise, personalised service, and refined aesthetics come together.",
+      "From the beginning, our philosophy has been centred on understanding the individual behind every style. We believe that exceptional beauty and grooming are not simply about following trends; they are about creating a look that complements your personality, features, lifestyle, and confidence.",
+      "Over the years, our approach has remained consistent: listen carefully, advise thoughtfully, execute precisely, and ensure every client leaves feeling confident in their appearance."
+    ]
+  },
+  "storyLine": "Professional Expertise · Personalised Service · Refined Results",
+  "philosophyTitle": "Beauty is Personal.",
+  "philosophy": {
+    "status": "verified",
+    "value": "At Classy, we believe there is no universal definition of great style.\n\nEvery client is different, and every service should reflect that individuality. We take the time to understand your preferences, expectations, and desired outcome before creating a personalised approach.\n\nOur philosophy combines professional knowledge, creativity, precision, and attention to detail to deliver results that feel contemporary, refined, and authentically yours."
+  },
+  "approach": {
+    "title": "Expertise. Precision. Personalisation.",
+    "lead": "Our approach begins with consultation and ends with confidence.",
+    "paragraphs": [
+      "We listen to what you want, provide professional guidance where appropriate, and carefully tailor each service to achieve the desired result. Every stage — from preparation and technique to finishing — is handled with attention to detail.",
+      "Just as important, we believe that exceptional service extends beyond the technical quality of a treatment. It is also about creating an environment where every client feels comfortable, valued, and respected.",
+      "Whether you are maintaining your signature look, preparing for a special occasion, exploring a new style, or simply taking time for yourself, Classy offers an experience designed around you."
+    ]
+  },
+  "defines": {
+    "title": "What Defines Classy",
+    "items": [
+      { "title": "Personalised Expertise", "text": "Professional recommendations and services tailored to the individual." },
+      { "title": "Precision & Craftsmanship", "text": "Careful technique, attention to detail, and a refined finish." },
+      { "title": "Client-Centred Service", "text": "A welcoming and attentive experience from consultation to completion." },
+      { "title": "Trust & Transparency", "text": "Open communication and thoughtful professional guidance." },
+      { "title": "Contemporary Style", "text": "Modern aesthetics interpreted in a way that remains personal and effortless." }
+    ]
+  },
+  "commitment": {
+    "title": "Our Commitment",
+    "line": "Established in 2021 — built on expertise, refined by experience.",
+    "paragraphs": [
+      "Since 2021, Classy Unisex Salon has been dedicated to bringing together professional craftsmanship and personalised care to create a salon experience our clients can return to with confidence.",
+      "Our commitment is simple: to continually elevate our standards, refine our expertise, and make every visit a meaningful part of your personal style journey."
+    ]
+  },
+  "tagline": "Where Your Style Meets Our Craft."
+}

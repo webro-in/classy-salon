@@ -1,0 +1,483 @@
+{
+  "$comment": "Gallery 'The Classy Edit'. Real Classy media plus client-selected licensed stock under 'looks' (license field; never presented as Classy's work). In the All view items are grouped into four editorial sections (src/data/gallery.ts → galleryTheme): Bridal Beauty, Hair Artistry, Beauty & Transformation, Inside Classy. layout: 'wide' = two columns, 'full' = full row. people: true = identifiable person in the client's own media (consent gate).",
+  "categories": [
+    {
+      "id": "work",
+      "label": "Our Work"
+    },
+    {
+      "id": "space",
+      "label": "The Space"
+    },
+    {
+      "id": "looks",
+      "label": "Looks"
+    },
+    {
+      "id": "videos",
+      "label": "Videos"
+    },
+    {
+      "id": "before-after",
+      "label": "Before & After"
+    }
+  ],
+  "items": [
+    {
+      "id": "work-bride-full",
+      "category": "work",
+      "kind": "image",
+      "src": "/media/gallery/work-bride-full.jpg",
+      "thumb": "/media/gallery/work-bride-full-sm.jpg",
+      "alt": "A full bridal look by Classy: red lehenga, dupatta and kundan jewellery",
+      "ratio": "3:4",
+      "people": true,
+      "featured": true
+    },
+    {
+      "id": "work-bride-jewellery",
+      "category": "work",
+      "kind": "image",
+      "src": "/media/gallery/work-bride-jewellery.jpg",
+      "thumb": "/media/gallery/work-bride-jewellery-sm.jpg",
+      "alt": "Bridal makeup by Classy, finished with a nath and kundan necklace",
+      "ratio": "707:900",
+      "people": true,
+      "layout": "wide"
+    },
+    {
+      "id": "work-bride-dupatta",
+      "category": "work",
+      "kind": "image",
+      "src": "/media/gallery/work-bride-dupatta.jpg",
+      "thumb": "/media/gallery/work-bride-dupatta-sm.jpg",
+      "alt": "A bride adjusting her dupatta, makeup by Classy",
+      "ratio": "3:4",
+      "people": true
+    },
+    {
+      "id": "work-bride-jali",
+      "category": "work",
+      "kind": "image",
+      "src": "/media/gallery/work-bride-jali.jpg",
+      "thumb": "/media/gallery/work-bride-jali-sm.jpg",
+      "alt": "A bride by Classy against a red jali screen",
+      "ratio": "23:40",
+      "people": true
+    },
+    {
+      "id": "work-bride-seated",
+      "category": "work",
+      "kind": "image",
+      "src": "/media/gallery/work-bride-seated.jpg",
+      "thumb": "/media/gallery/work-bride-seated-sm.jpg",
+      "alt": "A bride by Classy showing her bangles and jewellery",
+      "ratio": "481:600",
+      "people": true
+    },
+    {
+      "id": "look-bridal-red",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-bridal-red.jpg",
+      "thumb": "/media/gallery/look-bridal-red-sm.jpg",
+      "alt": "A bride in red with a maang tikka, nath and layered gold jewellery",
+      "ratio": "3:4",
+      "people": false,
+      "license": "Pexels"
+    },
+    {
+      "id": "look-bridal-roses",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-bridal-roses.jpg",
+      "thumb": "/media/gallery/look-bridal-roses-sm.jpg",
+      "alt": "A bride in a red lehenga holding red roses",
+      "ratio": "3:4",
+      "people": false,
+      "license": "Pexels"
+    },
+    {
+      "id": "look-bridal-emerald",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-bridal-emerald.jpg",
+      "thumb": "/media/gallery/look-bridal-emerald-sm.jpg",
+      "alt": "A bride in a red dupatta with emerald and gold jewellery",
+      "ratio": "3:4",
+      "people": false,
+      "license": "Pexels"
+    },
+    {
+      "id": "look-bridal-kundan",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-bridal-kundan.jpg",
+      "thumb": "/media/gallery/look-bridal-kundan-sm.jpg",
+      "alt": "A soft, luminous bridal makeup look with kundan jewellery",
+      "ratio": "3:4",
+      "people": false,
+      "license": "Pexels"
+    },
+    {
+      "id": "look-bridal-maroon",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-bridal-maroon.jpg",
+      "thumb": "/media/gallery/look-bridal-maroon-sm.jpg",
+      "alt": "A bride in a maroon lehenga with kundan jewellery and a red dupatta",
+      "ratio": "3:4",
+      "people": false,
+      "license": "Pexels"
+    },
+    {
+      "id": "look-bridal-mandap",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-bridal-mandap.jpg",
+      "thumb": "/media/gallery/look-bridal-mandap-sm.jpg",
+      "alt": "A bride in pink and red at a floral mandap",
+      "ratio": "3:4",
+      "people": false,
+      "license": "Pexels"
+    },
+    {
+      "id": "look-bridal-glow",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-bridal-glow.jpg",
+      "thumb": "/media/gallery/look-bridal-glow-sm.jpg",
+      "alt": "A bridal makeup look with rose-gold jewellery and a red lehenga",
+      "ratio": "3:4",
+      "people": false,
+      "license": "Pexels"
+    },
+    {
+      "id": "look-bridal-bangles",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-bridal-bangles.jpg",
+      "thumb": "/media/gallery/look-bridal-bangles-sm.jpg",
+      "alt": "A bride in red with bangles, choora and a heavy gold necklace",
+      "ratio": "3:4",
+      "people": false,
+      "license": "Pexels"
+    },
+    {
+      "id": "work-hair-wash",
+      "category": "work",
+      "kind": "image",
+      "src": "/media/gallery/work-hair-wash.jpg",
+      "thumb": "/media/gallery/work-hair-wash-sm.jpg",
+      "alt": "A Classy stylist giving a client a hair wash at the backwash station",
+      "ratio": "3:4",
+      "people": true
+    },
+    {
+      "id": "work-nail-art-wheel",
+      "category": "work",
+      "kind": "image",
+      "src": "/media/gallery/work-nail-art-wheel.jpg",
+      "thumb": "/media/gallery/work-nail-art-wheel-sm.jpg",
+      "alt": "A wheel of nail art designs at Classy",
+      "ratio": "3:4",
+      "people": false
+    },
+    {
+      "id": "work-nail-art-detail",
+      "category": "work",
+      "kind": "image",
+      "src": "/media/gallery/work-nail-art-detail.jpg",
+      "thumb": "/media/gallery/work-nail-art-detail-sm.jpg",
+      "alt": "Nail art designs in detail at Classy",
+      "ratio": "3:4",
+      "people": false
+    },
+    {
+      "id": "look-evening-mono",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-evening-mono.jpg",
+      "thumb": "/media/gallery/look-evening-mono-sm.jpg",
+      "alt": "Black-and-white portrait of a sculpted evening makeup look",
+      "ratio": "3:4",
+      "people": false,
+      "license": "Pexels",
+      "layout": "wide"
+    },
+    {
+      "id": "look-glossy-hair",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-glossy-hair.jpg",
+      "thumb": "/media/gallery/look-glossy-hair-sm.jpg",
+      "alt": "Long, glossy, smooth brunette hair",
+      "ratio": "3:4",
+      "people": false,
+      "license": "Pexels",
+      "layout": "wide"
+    },
+    {
+      "id": "look-colour-pop",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-colour-pop.jpg",
+      "thumb": "/media/gallery/look-colour-pop-sm.jpg",
+      "alt": "A bold makeup look with a red outfit against a blue backdrop",
+      "ratio": "3:4",
+      "people": false,
+      "license": "Pexels"
+    },
+    {
+      "id": "look-textured-hair",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-textured-hair.jpg",
+      "thumb": "/media/gallery/look-textured-hair-sm.jpg",
+      "alt": "Black-and-white close-up of long, textured hair",
+      "ratio": "1:1",
+      "people": false,
+      "license": "Pexels"
+    },
+    {
+      "id": "look-studio-makeup",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-studio-makeup.jpg",
+      "thumb": "/media/gallery/look-studio-makeup-sm.jpg",
+      "alt": "Makeup being blended at a mirror, with brushes and palettes on the table",
+      "ratio": "3:4",
+      "people": false,
+      "license": "Pexels"
+    },
+    {
+      "id": "look-hair-ritual",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-hair-ritual.jpg",
+      "thumb": "/media/gallery/look-hair-ritual-sm.jpg",
+      "alt": "A nourishing hair wash and scalp massage at the basin",
+      "ratio": "3:4",
+      "people": false,
+      "license": "Pexels"
+    },
+    {
+      "id": "look-black-gown",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-black-gown.jpg",
+      "thumb": "/media/gallery/look-black-gown-sm.jpg",
+      "alt": "Black-and-white portrait in a black evening gown",
+      "ratio": "9:16",
+      "people": false,
+      "license": "Pexels"
+    },
+    {
+      "id": "look-scalp-care",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-scalp-care.jpg",
+      "thumb": "/media/gallery/look-scalp-care-sm.jpg",
+      "alt": "A hair wash in progress at a black basin",
+      "ratio": "3:4",
+      "people": false,
+      "license": "Pexels"
+    },
+    {
+      "id": "space-styling-bar",
+      "category": "space",
+      "kind": "image",
+      "src": "/media/gallery/space-styling-bar.jpg",
+      "thumb": "/media/gallery/space-styling-bar-sm.jpg",
+      "alt": "Gold-framed oval mirrors along the styling bar at Classy",
+      "ratio": "3:4",
+      "people": false
+    },
+    {
+      "id": "space-oval-mirrors",
+      "category": "space",
+      "kind": "image",
+      "src": "/media/gallery/space-oval-mirrors.jpg",
+      "thumb": "/media/gallery/space-oval-mirrors-sm.jpg",
+      "alt": "The styling floor at Classy, with oval mirrors and blush chairs",
+      "ratio": "3:4",
+      "people": false
+    },
+    {
+      "id": "space-bright-floor",
+      "category": "space",
+      "kind": "image",
+      "src": "/media/gallery/space-bright-floor.jpg",
+      "thumb": "/media/gallery/space-bright-floor-sm.jpg",
+      "alt": "The bright styling floor at Classy with arched mirrors and blush chairs",
+      "ratio": "3:4",
+      "people": false,
+      "layout": "full"
+    },
+    {
+      "id": "space-arched-mirrors",
+      "category": "space",
+      "kind": "image",
+      "src": "/media/gallery/space-arched-mirrors.jpg",
+      "thumb": "/media/gallery/space-arched-mirrors-sm.jpg",
+      "alt": "Arched, lit mirrors along the styling bar under the carved wooden ceiling",
+      "ratio": "3:4",
+      "people": false
+    },
+    {
+      "id": "space-wash-station",
+      "category": "space",
+      "kind": "image",
+      "src": "/media/gallery/space-wash-station.jpg",
+      "thumb": "/media/gallery/space-wash-station-sm.jpg",
+      "alt": "The hair wash station beneath lit, arched product shelves at Classy",
+      "ratio": "3:4",
+      "people": false
+    },
+    {
+      "id": "space-facial-room",
+      "category": "space",
+      "kind": "image",
+      "src": "/media/gallery/space-facial-room.jpg",
+      "thumb": "/media/gallery/space-facial-room-sm.jpg",
+      "alt": "A calm facial room at Classy with a prepared treatment bed",
+      "ratio": "3:4",
+      "people": false
+    },
+    {
+      "id": "space-curved-shelves",
+      "category": "space",
+      "kind": "image",
+      "src": "/media/gallery/space-curved-shelves.jpg",
+      "thumb": "/media/gallery/space-curved-shelves-sm.jpg",
+      "alt": "Curved, lit product shelves at Classy",
+      "ratio": "3:4",
+      "people": false
+    },
+    {
+      "id": "space-night-sign",
+      "category": "space",
+      "kind": "image",
+      "src": "/media/gallery/space-night-sign.jpg",
+      "thumb": "/media/gallery/space-night-sign-sm.jpg",
+      "alt": "The Classy Salon Unisex sign lit at night, Jagatpura",
+      "ratio": "3:4",
+      "people": false
+    },
+    {
+      "id": "space-wash-lounge",
+      "category": "space",
+      "kind": "image",
+      "src": "/media/gallery/space-wash-lounge.jpg",
+      "thumb": "/media/gallery/space-wash-lounge-sm.jpg",
+      "alt": "The hair wash lounge at Classy",
+      "ratio": "3:4",
+      "people": false
+    },
+    {
+      "id": "space-arched-niche",
+      "category": "space",
+      "kind": "image",
+      "src": "/media/gallery/space-arched-niche.jpg",
+      "thumb": "/media/gallery/space-arched-niche-sm.jpg",
+      "alt": "An arched niche of hair and skin care products",
+      "ratio": "3:4",
+      "people": false
+    },
+    {
+      "id": "space-treatment-room",
+      "category": "space",
+      "kind": "image",
+      "src": "/media/gallery/space-treatment-room.jpg",
+      "thumb": "/media/gallery/space-treatment-room-sm.jpg",
+      "alt": "A calm treatment room at Classy",
+      "ratio": "3:4",
+      "people": false
+    },
+    {
+      "id": "space-makeup-stations",
+      "category": "space",
+      "kind": "image",
+      "src": "/media/gallery/space-makeup-stations.jpg",
+      "thumb": "/media/gallery/space-makeup-stations-sm.jpg",
+      "alt": "Makeup stations with framed mirrors at Classy",
+      "ratio": "3:4",
+      "people": false
+    },
+    {
+      "id": "space-styling-floor",
+      "category": "space",
+      "kind": "image",
+      "src": "/media/gallery/space-styling-floor.jpg",
+      "thumb": "/media/gallery/space-styling-floor-sm.jpg",
+      "alt": "The styling floor under the jali ceiling",
+      "ratio": "3:4",
+      "people": false
+    },
+    {
+      "id": "space-lit-shelves",
+      "category": "space",
+      "kind": "image",
+      "src": "/media/gallery/space-lit-shelves.jpg",
+      "thumb": "/media/gallery/space-lit-shelves-sm.jpg",
+      "alt": "Lit retail shelves at Classy",
+      "ratio": "91:200",
+      "people": false
+    },
+    {
+      "id": "video-makeup-studio",
+      "category": "videos",
+      "kind": "video",
+      "src": "/media/gallery/video-makeup-studio.mp4",
+      "thumb": "/media/gallery/video-makeup-studio-poster.jpg",
+      "poster": "/media/gallery/video-makeup-studio-poster.jpg",
+      "alt": "Video: the makeup kit in the Classy studio",
+      "ratio": "16:9",
+      "people": false
+    },
+    {
+      "id": "look-nails-polka",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-nails-polka.jpg",
+      "thumb": "/media/gallery/look-nails-polka-sm.jpg",
+      "alt": "Almond nails with polka dots and black bows",
+      "ratio": "3:4",
+      "people": false,
+      "license": "Pexels"
+    },
+    {
+      "id": "look-nails-statement",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-nails-statement.jpg",
+      "thumb": "/media/gallery/look-nails-statement-sm.jpg",
+      "alt": "Statement nails with a red swirl design",
+      "ratio": "3:4",
+      "people": false,
+      "license": "Pexels"
+    },
+    {
+      "id": "look-nails-emerald",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-nails-emerald.jpg",
+      "thumb": "/media/gallery/look-nails-emerald-sm.jpg",
+      "alt": "Emerald marble nail art on almond nails",
+      "ratio": "488:612",
+      "people": false,
+      "license": "iStock — LICENCE REQUIRED before launch (612px preview)"
+    },
+    {
+      "id": "look-nails-blush",
+      "category": "looks",
+      "kind": "image",
+      "src": "/media/gallery/look-nails-blush.jpg",
+      "thumb": "/media/gallery/look-nails-blush-sm.jpg",
+      "alt": "Soft blush almond nails with delicate floral art",
+      "ratio": "612:344",
+      "people": false,
+      "license": "iStock — LICENCE REQUIRED before launch (612px preview)"
+    }
+  ]
+}

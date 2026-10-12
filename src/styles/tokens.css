@@ -1,0 +1,161 @@
+/*
+ * Classy design tokens — "Quiet atelier, richly told" (docs/DESIGN.md).
+ * Tailwind v4 reads @theme to generate utilities (bg-ivory, text-display, py-section …).
+ * Tailwind defaults for colour, radius and shadow are cleared so only the
+ * Classy palette can be used.
+ */
+@theme {
+  /* ---------- Colour: raw palette ---------- */
+  --color-*: initial;
+  --color-ivory: #ffffff; /* white-first theme (client request 2026-10-01) */
+  --color-cream: #f8f6f2;
+  --color-taupe: #efe9e1;
+  --color-oak: #c9b79e;
+  --color-ink: #17140f;
+  --color-ink-muted: #6b6158;
+  --color-line: #e5ded4;
+  --color-brass: #9a7444;
+  --color-brass-strong: #7a5a33;
+  --color-brass-soft: #c9a674;
+  --color-brass-deep: #6e5130; /* accent on taupe (AA) */
+  --color-night: #191714;
+  --color-night-raised: #24211d;
+  --color-on-night: #efe8dd;
+  --color-on-night-muted: #a89d90;
+  --color-line-night: #3a352f;
+  --color-success: #4f6b4a;
+  --color-error: #9b3b2e;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  /* ---------- Typography ---------- */
+  --font-*: initial;
+  --font-display: 'Instrument Serif', 'Iowan Old Style', 'Times New Roman', serif;
+  --font-sans: 'Hanken Grotesk Variable', 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+
+  --text-*: initial;
+  /* Fluid editorial scale: clamp(min, preferred, max) */
+  --text-display-xl: clamp(3.25rem, 1.6rem + 7.2vw, 8.5rem);
+  --text-display-xl--line-height: 0.92;
+  --text-display-xl--letter-spacing: -0.025em;
+  --text-display: clamp(2.75rem, 1.7rem + 4.4vw, 6rem);
+  --text-display--line-height: 0.95;
+  --text-display--letter-spacing: -0.02em;
+  --text-h1: clamp(2.5rem, 1.8rem + 3vw, 4.5rem);
+  --text-h1--line-height: 1;
+  --text-h1--letter-spacing: -0.015em;
+  --text-h2: clamp(2rem, 1.55rem + 1.9vw, 3.5rem);
+  --text-h2--line-height: 1.05;
+  --text-h2--letter-spacing: -0.01em;
+  --text-h3: clamp(1.5rem, 1.3rem + 0.85vw, 2.125rem);
+  --text-h3--line-height: 1.12;
+  --text-h4: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);
+  --text-h4--line-height: 1.2;
+  --text-lead: clamp(1.125rem, 1.05rem + 0.35vw, 1.375rem);
+  --text-lead--line-height: 1.55;
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.65;
+  --text-small: 0.9375rem;
+  --text-small--line-height: 1.55;
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.5;
+  --text-label: 0.75rem;
+  --text-label--line-height: 1.3;
+  --text-label--letter-spacing: 0.16em;
+  --text-numeral: clamp(3rem, 2rem + 4vw, 6.5rem);
+  --text-numeral--line-height: 0.9;
+
+  /* ---------- Spacing (4px base; Tailwind spacing utilities use --spacing) ---------- */
+  --spacing: 0.25rem;
+  --spacing-section: clamp(4.5rem, 2.8rem + 7vw, 8rem);
+  --spacing-section-sm: clamp(3rem, 2rem + 4vw, 5rem);
+  --spacing-gutter: clamp(1rem, 0.6rem + 1.6vw, 2rem);
+  --spacing-margin: clamp(1.25rem, 0.2rem + 4.5vw, 5rem);
+  --spacing-header: 4.5rem;
+  --spacing-action-bar: 4.25rem;
+
+  /* ---------- Layout ---------- */
+  --container-content: 90rem; /* 1440px */
+  --container-prose: 40rem;
+  --container-narrow: 56rem;
+
+  /* ---------- Breakpoints (target widths 390 · 430 · 768 · 1024 · 1280 · 1440 · 1920) ---------- */
+  --breakpoint-*: initial;
+  --breakpoint-xs: 26.875rem; /* 430 */
+  --breakpoint-sm: 40rem; /* 640 */
+  --breakpoint-md: 48rem; /* 768 */
+  --breakpoint-lg: 64rem; /* 1024 */
+  --breakpoint-xl: 80rem; /* 1280 */
+  --breakpoint-2xl: 90rem; /* 1440 */
+  --breakpoint-3xl: 120rem; /* 1920 */
+
+  /* ---------- Shape ---------- */
+  --radius-*: initial;
+  --radius-input: 2px;
+  --radius-pill: 999px;
+
+  /* ---------- Elevation: used only for the lightbox and mobile action bar ---------- */
+  --shadow-*: initial;
+  --shadow-float: 0 8px 24px rgb(25 23 20 / 0.12);
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-micro: 180ms;
+  --duration-ui: 320ms;
+  --duration-page: 420ms;
+  --duration-reveal: 800ms;
+}
+
+/*
+ * Section tones. A <Section tone="…"> sets these variables so every child can use
+ * tone-aware utilities (text-fg, text-fg-muted, border-rule, bg-tone) and stay
+ * correct on light, taupe and dark chapters.
+ */
+@theme inline {
+  --color-tone: var(--tone-bg);
+  --color-fg: var(--tone-fg);
+  --color-fg-muted: var(--tone-fg-muted);
+  --color-rule: var(--tone-line);
+  --color-accent: var(--tone-accent);
+  --color-error-on-tone: var(--tone-error);
+}
+
+:root,
+.tone-ivory {
+  --tone-bg: var(--color-ivory);
+  --tone-fg: var(--color-ink);
+  --tone-fg-muted: var(--color-ink-muted);
+  --tone-line: var(--color-line);
+  --tone-accent: var(--color-brass-strong);
+  --tone-placeholder: var(--color-taupe);
+  --tone-error: var(--color-error);
+}
+.tone-cream {
+  --tone-bg: var(--color-cream);
+  --tone-fg: var(--color-ink);
+  --tone-fg-muted: var(--color-ink-muted);
+  --tone-line: var(--color-line);
+  --tone-accent: var(--color-brass-strong);
+  --tone-placeholder: var(--color-taupe);
+  --tone-error: var(--color-error);
+}
+.tone-taupe {
+  --tone-bg: var(--color-taupe);
+  --tone-fg: var(--color-ink);
+  --tone-fg-muted: #5c5249; /* AA on taupe */
+  --tone-line: #d6ccbf;
+  --tone-accent: var(--color-brass-deep);
+  --tone-placeholder: var(--color-cream);
+  --tone-error: #8a3428; /* AA on taupe */
+}
+.tone-dark {
+  color-scheme: dark; /* native date/time pickers and form controls */
+  --tone-bg: var(--color-night);
+  --tone-fg: var(--color-on-night);
+  --tone-fg-muted: var(--color-on-night-muted);
+  --tone-line: var(--color-line-night);
+  --tone-accent: var(--color-brass-soft);
+  --tone-placeholder: var(--color-night-raised);
+  --tone-error: #eaa99c; /* AA on night */
+}

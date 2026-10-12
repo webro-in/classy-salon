@@ -1,0 +1,154 @@
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-padding-top: calc(var(--spacing-header) + 1rem);
+    background: var(--color-ivory);
+    color-scheme: light;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: var(--tone-bg);
+    color: var(--tone-fg);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  p { margin: 0; text-wrap: pretty; }
+
+  img, video, svg, canvas { display: block; max-width: 100%; }
+
+  a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.25em; }
+
+  button { font: inherit; color: inherit; }
+
+  ::selection { background: var(--color-brass-soft); color: var(--color-night); }
+
+  /* Visible, consistent focus for keyboard users. */
+  :focus-visible {
+    outline: 2px solid var(--tone-accent);
+    outline-offset: 3px;
+  }
+
+  /* Content is visible without JavaScript; motion only enhances it. */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Page container: 1440px max with fluid margins. */
+  .container-page {
+    width: 100%;
+    max-width: calc(var(--container-content) + 2 * var(--spacing-margin));
+    margin-inline: auto;
+    padding-inline: var(--spacing-margin);
+  }
+
+  /* 12-column editorial grid (4 columns < 768px, 8 at tablet). */
+  .grid-editorial {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: var(--spacing-gutter);
+  }
+  @media (min-width: 48rem) { .grid-editorial { grid-template-columns: repeat(8, minmax(0, 1fr)); } }
+  @media (min-width: 64rem) { .grid-editorial { grid-template-columns: repeat(12, minmax(0, 1fr)); } }
+
+  /* Uppercase eyebrow / navigation label. */
+  .label {
+    font-family: var(--font-sans);
+    font-size: var(--text-label);
+    line-height: var(--text-label--line-height);
+    letter-spacing: var(--text-label--letter-spacing);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /*
+   * Gallery: row-major masonry with CSS grid. The grid is a size container;
+   * one row unit = 1/40 of a column width, so each tile spans rows in
+   * proportion to its real aspect ratio (set inline as --span). Landscape
+   * tiles span two columns. Reading/tab order follows the visual order.
+   */
+  .gallery-grid {
+    --cols: 2;
+    --gap: var(--spacing-gutter);
+    container-type: inline-size;
+    display: grid;
+    grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+    column-gap: var(--gap);
+    grid-auto-flow: row dense;
+    grid-auto-rows: calc((100cqw - (var(--cols) - 1) * var(--gap)) / var(--cols) / 40);
+  }
+  @media (min-width: 64rem) { .gallery-grid { --cols: 3; } }
+  @media (min-width: 120rem) { .gallery-grid { --cols: 4; } }
+  .gallery-grid > li { grid-row-end: span var(--span); padding-bottom: var(--gap); }
+  /* Landscape tiles go double-width only with 3+ columns (no holes on 2-column phones/tablets). */
+  @media (min-width: 64rem) {
+    .gallery-grid > li[data-wide] { grid-column-end: span 2; grid-row-end: span var(--span-wide); }
+    .gallery-grid > li[data-full] { grid-column: 1 / -1; grid-row-end: span var(--span-full); }
+  }
+
+  /* Signature arched mask, after the salon's mirrors. Semicircular top at any width. */
+  .arch { border-radius: 9999px 9999px 0 0; overflow: hidden; }
+
+  /* Fine linen texture for placeholders (inline SVG noise, < 1 KB). */
+  .texture-linen {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.3 0 0 0 0 0.25 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .sr-only-focusable:not(:focus-visible) {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+}
+
+/* ---------- Home hero ---------- */
+@layer components {
+  .text-hero {
+    font-size: clamp(5.5rem, 2.2rem + 15vw, 15rem);
+    line-height: 0.82;
+    letter-spacing: -0.035em;
+  }
+
+  /* CSS-only entrance: runs on first paint from the static HTML (no JS flash). */
+  .hero-rise { animation: hero-rise 1s var(--ease-out) both; }
+  .hero-fade { animation: hero-fade 0.6s var(--ease-out) both; }
+  .hero-progress { transform: scaleX(0); animation-name: hero-progress; animation-timing-function: linear; animation-fill-mode: forwards; }
+
+  @keyframes hero-rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+  @keyframes hero-fade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes lightbox-in { from { opacity: 0; transform: scale(0.985); } to { opacity: 1; transform: none; } }
+  @keyframes hero-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-rise, .hero-fade { animation: none; }
+    .hero-progress { animation: none; transform: scaleX(1); }
+  }
+}
+
+/* ---------- Horizontal rails ---------- */
+@layer components {
+  .rail { scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .rail::-webkit-scrollbar { display: none; }
+  .rail:focus-visible { outline-offset: -2px; }
+}

@@ -93,3 +93,20 @@ Netlify (publish `dist`, `404.html` auto-served), Cloudflare Pages (same), or an
 3. Submit `sitemap.xml` to Search Console. Test share previews (WhatsApp, Facebook debugger).
 4. Add the URL to the Google Business Profile and both Instagram bios.
 5. Re-verify the rating monthly in `content/business.json`.
+
+## Client preview on Vercel (staging)
+
+`npm run build:staging` builds a clean client-preview site: no developer markers,
+no styleguide, `noindex, nofollow` on every page (plus an `X-Robots-Tag` header
+and `robots.txt: Disallow: /`). The production release gate is unchanged:
+`npm run build:production` still fails until every client item is verified.
+
+`vercel.json` runs `npm ci` + `npm run build:staging` and serves `dist/`.
+Canonical/OG URLs use `VITE_SITE_URL`, or Vercel's project address when unset.
+
+Setup (once): vercel.com → Add New → Project → import `webro-in/classy-salon`
+→ Deploy (settings come from `vercel.json`). Every `git push` to `main` redeploys.
+
+Going live for real: finish the release blockers, set `VITE_SITE_URL` to the
+domain, change `buildCommand` in `vercel.json` to `npm run build:production`,
+remove the `X-Robots-Tag` header, and add the domain in Vercel → Domains.

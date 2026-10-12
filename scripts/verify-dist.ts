@@ -8,7 +8,8 @@ import { PATHS, PUBLIC_PATHS } from '../src/app/paths'
 import { buildEnv } from './env'
 import { FORBIDDEN_CONTENT } from './forbidden'
 
-const { strict } = buildEnv()
+const { strict, staging } = buildEnv()
+const clean = strict || staging
 const errors: string[] = []
 const fileFor = (p: string) => (p === '/' ? 'dist/index.html' : `dist${p}/index.html`)
 
@@ -41,15 +42,16 @@ function check(path: string, file: string, opts: { canonical: boolean }) {
   if (!/<div id="root"[^>]*>\s*<[a-z]/i.test(html)) errors.push(`${path}: #root is empty (not prerendered)`)
   if (textContent(html).length < 200) errors.push(`${path}: too little prerendered text`)
   for (const { pattern, reason } of FORBIDDEN_CONTENT) if (pattern.test(textContent(html))) errors.push(`${path}: ${reason}`)
-  if (strict && /data-content-marker/.test(html)) errors.push(`${path}: unresolved client-data marker`)
+  if (clean && /data-content-marker/.test(html)) errors.push(`${path}: developer marker in a client-facing build`)
+  if (staging && !/name="robots" content="noindex/.test(html)) errors.push(`${path}: staging page must be noindex`)
   if (strict && /data-media-placeholder/.test(html)) errors.push(`${path}: placeholder media`)
   if (strict && /data-scaffold/.test(html)) errors.push(`${path}: unbuilt section scaffold`)
 }
 
-for (const p of PUBLIC_PATHS) check(p, fileFor(p), { canonical: true })
+for (const p of PUBLIC_PATHS) check(p, fileFor(p), { canonical: !staging }) // staging pages are noindex: no canonical
 check('404', 'dist/404.html', { canonical: false })
 if (existsSync('dist/404')) errors.push('dist/404/ directory should have been moved to dist/404.html')
-if (strict && existsSync(fileFor(PATHS.styleguide))) errors.push('styleguide must not ship in strict builds')
+if (clean && existsSync(fileFor(PATHS.styleguide))) errors.push('styleguide must not ship in strict builds')
 for (const f of ['dist/sitemap.xml', 'dist/robots.txt', 'dist/icons/favicon.svg', 'dist/site.webmanifest']) {
   if (!existsSync(f)) errors.push(`missing ${f}`)
 }

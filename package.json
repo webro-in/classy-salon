@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsx scripts/build.ts",
+    "build:staging": "tsx scripts/build.ts --staging",
     "build:production": "tsx scripts/build.ts --production",
     "preview": "tsx scripts/serve-static.ts",
     "typecheck": "tsc -b --noEmit",

@@ -15,7 +15,8 @@ import { LegalText } from './LegalText'
  * Optional sections that are still pending are omitted in production.
  */
 export function LegalPage({ doc, trail }: { doc: LegalDocument; trail: Crumb[] }) {
-  const sections = doc.sections.filter((s) => showContentMarkers || !isOptionalPending(s))
+  // Without markers, sections whose content is still entirely pending are left out (production stays blocked on required ones).
+  const sections = doc.sections.filter((s) => showContentMarkers || !s.blocks.every((b) => b.kind === 'pending'))
   return (
     <>
       <Section tone="ivory" spacing="none" labelledBy="page-title" className="pt-10 lg:pt-14">
@@ -24,10 +25,12 @@ export function LegalPage({ doc, trail }: { doc: LegalDocument; trail: Crumb[] }
           <div className="mt-10 border-b border-rule pb-10 lg:mt-16 lg:pb-14">
             <Heading as="h1" id="page-title" size="h1" className="hero-rise [animation-delay:120ms]">{doc.title}</Heading>
             <Lead className="hero-rise mt-6 max-w-[46ch] text-fg-muted [animation-delay:200ms]">{doc.intro}</Lead>
-            <p className="label hero-rise mt-8 text-fg-muted [animation-delay:260ms]" data-effective-date>
-              Last updated{' '}
-              {effectiveDate ? <span className="text-fg">{formatLegalDate(effectiveDate)}</span> : <ContentMarker kind="legal" inline>effective date</ContentMarker>}
-            </p>
+            {(effectiveDate || showContentMarkers) && (
+              <p className="label hero-rise mt-8 text-fg-muted [animation-delay:260ms]" data-effective-date>
+                Last updated{' '}
+                {effectiveDate ? <span className="text-fg">{formatLegalDate(effectiveDate)}</span> : <ContentMarker kind="legal" inline>effective date</ContentMarker>}
+              </p>
+            )}
           </div>
         </Container>
       </Section>

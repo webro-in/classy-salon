@@ -7,7 +7,3 @@ playwright-report
 *.local
 .env
 .DS_Store
-
-# Local-only
-_to_delete/
-.vite-react-ssg-temp/

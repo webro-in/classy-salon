@@ -12,14 +12,16 @@ export const site = {
   language: 'en-IN',
   /** Strict builds fail on unresolved content and hide every dev marker. */
   strictContent: env.VITE_STRICT_CONTENT === 'true',
+  /** Client-preview deployment (npm run build:staging): no dev markers, hidden from search engines, release gate unchanged. */
+  staging: env.VITE_STAGING === 'true',
   analytics: {
     provider: ((env.VITE_ANALYTICS_PROVIDER as string | undefined) ?? 'none') as 'none' | 'plausible' | 'ga4',
     id: (env.VITE_ANALYTICS_ID as string | undefined) ?? '',
   },
 } as const
 
-/** Dev/preview builds show visible markers for missing client content and media. */
-export const showContentMarkers = !site.strictContent
+/** Dev/preview builds show visible markers for missing client content and media (never strict or staging builds). */
+export const showContentMarkers = !site.strictContent && !site.staging
 
 export function absoluteUrl(path: string): string {
   if (/^https?:\/\//.test(path)) return path

@@ -14,5 +14,7 @@ writeFileSync(
   'dist/sitemap.xml',
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`,
 )
-writeFileSync('dist/robots.txt', `User-agent: *\nAllow: /\nDisallow: /styleguide\n\nSitemap: ${siteUrl}/sitemap.xml\n`)
+writeFileSync('dist/robots.txt', buildEnv().staging
+  ? 'User-agent: *\nDisallow: /\n' // client preview: keep it out of search engines
+  : `User-agent: *\nAllow: /\nDisallow: /styleguide\n\nSitemap: ${siteUrl}/sitemap.xml\n`)
 console.log(`sitemap.xml (${PUBLIC_PATHS.length} urls) + robots.txt → dist/`)

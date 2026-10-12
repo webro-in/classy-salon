@@ -6,6 +6,7 @@ export function buildEnv() {
   return {
     siteUrl: (env.VITE_SITE_URL ?? 'https://classy-unisex-salon.example').replace(/\/+$/, ''),
     strict: env.VITE_STRICT_CONTENT === 'true',
+    staging: env.VITE_STAGING === 'true',
     analyticsProvider: env.VITE_ANALYTICS_PROVIDER ?? 'none',
   }
 }

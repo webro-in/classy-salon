@@ -16,6 +16,7 @@ import { getPrerenderPaths, postProcessPage } from './src/app/prerender'
 export default defineConfig(({ mode }) => {
   const env = { ...loadEnv(mode, process.cwd(), 'VITE_'), ...process.env }
   const strict = env.VITE_STRICT_CONTENT === 'true'
+  const staging = env.VITE_STAGING === 'true'
 
   return {
     plugins: [react(), tailwindcss()],
@@ -33,7 +34,7 @@ export default defineConfig(({ mode }) => {
       formatting: 'none',
       script: 'async',
       beastiesOptions: false,
-      includedRoutes: () => getPrerenderPaths(strict),
+      includedRoutes: () => getPrerenderPaths(strict || staging),
       onPageRendered: (_route: string, html: string) => postProcessPage(html),
       onFinished: (dir: string) => {
         const nested = join(dir, NOT_FOUND_PRERENDER_PATH, 'index.html')

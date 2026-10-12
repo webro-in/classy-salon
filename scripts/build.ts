@@ -3,6 +3,9 @@
  *
  *   npm run build               PREVIEW: placeholders + dev markers allowed,
  *                               missing client data is reported, never fatal.
+ *   npm run build:staging       CLIENT PREVIEW: like PREVIEW, but no dev markers,
+ *                               no styleguide, noindex on every page and
+ *                               robots.txt "Disallow: /". Not a release.
  *   npm run build:production    RELEASE: VITE_STRICT_CONTENT=true. Fails on any
  *                               missing/unverified client data, unconfirmed
  *                               service names, required placeholder media,
@@ -14,7 +17,15 @@
 import { spawnSync } from 'node:child_process'
 
 const production = process.argv.includes('--production')
-const env = { ...process.env, VITE_STRICT_CONTENT: production ? 'true' : 'false' }
+const staging = process.argv.includes('--staging')
+// Vercel exposes the project's address; use it for canonical/OG URLs when no domain is set yet.
+const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL
+const env = {
+  ...process.env,
+  VITE_STRICT_CONTENT: production ? 'true' : 'false',
+  VITE_STAGING: staging ? 'true' : 'false',
+  ...(!process.env.VITE_SITE_URL && vercelUrl ? { VITE_SITE_URL: `https://${vercelUrl}` } : {}),
+}
 
 const steps: Array<[string, string[]]> = [
   ['tsx', ['scripts/content-check.ts', ...(production ? ['--strict'] : [])]],
@@ -23,7 +34,8 @@ const steps: Array<[string, string[]]> = [
   ['tsx', ['scripts/verify-dist.ts']],
 ]
 
-console.log(`\n▸ Build mode: ${production ? 'PRODUCTION (release validation)' : 'PREVIEW (placeholders allowed)'}\n`)
+const label = production ? 'PRODUCTION (release validation)' : staging ? 'STAGING (client preview: no dev markers, noindex)' : 'PREVIEW (placeholders allowed)'
+console.log(`\n▸ Build mode: ${label}\n`)
 for (const [cmd, args] of steps) {
   const r = spawnSync('npx', [cmd, ...args], { stdio: 'inherit', env, shell: process.platform === 'win32' })
   if (r.status !== 0) {

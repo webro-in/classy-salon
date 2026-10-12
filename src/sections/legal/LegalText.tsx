@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import { ContentMarker } from '@/components/content/ContentMarker'
+import { showContentMarkers } from '@/config/site'
 import { business, formatAddress } from '@/data/business'
 import { legalName } from '@/data/legal'
 import { valueOf } from '@/lib/content'
@@ -12,7 +13,9 @@ const link = 'text-fg underline decoration-rule underline-offset-[0.3em] hover:d
  * missing legal name renders the preview-only marker (production is blocked).
  */
 export function LegalText({ text }: { text: string }) {
-  const parts = text.split(/(\{\{\w+\}\})/g)
+  // Client preview (markers hidden) with no legal name yet: name the salon only, never an invented entity.
+  const source = !legalName && !showContentMarkers ? text.replace('{{legalName}}, trading as ', '') : text
+  const parts = source.split(/(\{\{\w+\}\})/g)
   return (
     <>
       {parts.map((part, i) => {

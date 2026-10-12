@@ -10,6 +10,7 @@ import { business } from '@/data/business'
  */
 export function Seo({ route }: { route: RouteKey | 'notFound' }) {
   const meta = routeSeo[route]
+  const noindex = meta.noindex || site.staging
   const canonical = absoluteUrl(meta.path)
   const image = ogImageFor(meta)
   return (
@@ -17,8 +18,8 @@ export function Seo({ route }: { route: RouteKey | 'notFound' }) {
       <html lang={site.language} />
       <title>{meta.title}</title>
       <meta name="description" content={meta.description} />
-      {meta.noindex ? <meta name="robots" content="noindex, nofollow" /> : <meta name="robots" content="index, follow" />}
-      {!meta.noindex && <link rel="canonical" href={canonical} />}
+      {noindex ? <meta name="robots" content="noindex, nofollow" /> : <meta name="robots" content="index, follow" />}
+      {!noindex && <link rel="canonical" href={canonical} />}
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={business.name} />
       <meta property="og:locale" content={site.locale} />
